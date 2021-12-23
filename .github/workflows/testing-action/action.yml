@@ -6,6 +6,8 @@ runs:
       uses: __CUSTOM_ACTION_REPO__@__GITHUB_SHA__
       id: sample
       with:
+        repository: ${{github.repository}}
+        pullRequestNumber: ${{github.action.number}}
         milliseconds: 5000
     - name: Test Outputs
       run: |
