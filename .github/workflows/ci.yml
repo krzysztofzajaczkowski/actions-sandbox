@@ -14,11 +14,8 @@ jobs:
     - name: Build Code
       run: ./build.ps1
       shell: pwsh
-    - uses: jwalton/gh-find-current-pr@v1
-        id: findPr
-        with:
-          # Can be "open", "closed", or "all".  Defaults to "open".
-          state: open
+    - name: Find Current Pull Request
+      uses: jwalton/gh-find-current-pr@v1.2.1
     - name: Run Action
       uses: ./
       id: sample
