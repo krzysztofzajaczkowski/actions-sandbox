@@ -21,6 +21,6 @@ jobs:
       id: sample
       with:
         repository: ${{github.repository}}
-        pullRequestNumber: ${{github.action.number}}
+        pullRequestNumber: ${{steps.findPr.outputs.number}}
         ctx: ${{toJSON(github)}}
         milliseconds: 5000
