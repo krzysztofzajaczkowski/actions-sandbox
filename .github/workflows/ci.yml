@@ -16,6 +16,7 @@ jobs:
       shell: pwsh
     - name: Find Current Pull Request
       uses: jwalton/gh-find-current-pr@v1.2.1
+      id: findPr
     - name: Run Action
       uses: ./
       id: sample
